@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+a{
+    text-decoration: none;
+}
+.amiri-bold-italic {
+    font-family: "Amiri", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .amiri-bold {
+    font-family: "Amiri", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .amiri-regular {
+    font-family: "Amiri", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+ .cointainer{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: #00ed96;
+background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    min-height: 100vh;
+ }
+ .nav{
+    min-height: 50px;
+
+
+ }
+
+ .section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;   
+    margin-left: auto; 
+    margin-right: auto; 
+}
+ .card {
+     display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+    width: 45vw;
+    background: #29292c;
+    border-radius: 1rem;
+    overflow: hidden;
+    --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+    
+    font-family: 'amiri' ,'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    --color: #32a6ff;
+    padding-bottom: 8px;
+}
+
+.card:before {
+    position: absolute;
+    content: "";
+    inset: 0.0625rem;
+    border-radius: 0.9375rem;
+    background: #18181b;
+    z-index: 2
+}
+
+.card:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: 0.125rem;
+    background: var(--gradient);
+    transition: transform 300ms ease;
+    z-index: 4;
+}
+
+.card:hover:after {
+    transform: translateX(0.15rem)
+}
+
+.cardtitle {
+    color: var(--color);
+    padding: 0.35rem 0.25rem 0 1.25rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
+
+.card:hover .cardtitle {
+    transform: translateX(0.15rem)
+}
+  
+.cardbody {
+    color: #99999d;
+    padding: 0 1.25rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
+
+.card:hover .cardbody {
+    transform: translateX(0.25rem)
+}
+
+.cardglow,
+.cardborderglow {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle closest-side at center, white, transparent);
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.cardglow {
+    z-index: 3;
+}
+
+.cardborderglow {
+    z-index: 1;
+  }
+  
+  .card:hover .cardglow {
+    opacity: 0.1
+  }
+  
+  .card:hover .cardborderglow {
+    opacity: 0.1
+}
+
+.note {
+    color: var(--color);
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    width: 75%;
+}
+@media (max-width: 768px){
+    .section{
+       display: grid;
+       grid-template-columns: 1fr ;
+       grid-template-rows: 1fr;
+       gap: 8px;
+    }
+    .card {
+       width: 90vw;
+   }
+}
