@@ -63,6 +63,7 @@ background-image: url("https://www.transparenttextures.com/patterns/black-linen.
     font-size: 1rem;
     --color: #32a6ff;
     padding-bottom: 8px;
+    
 }
 
 .card:before {
@@ -71,7 +72,7 @@ background-image: url("https://www.transparenttextures.com/patterns/black-linen.
     inset: 0.0625rem;
     border-radius: 0.9375rem;
     background: #18181b;
-    z-index: 2
+    z-index: 2;
 }
 
 .card:after {
@@ -82,16 +83,26 @@ background-image: url("https://www.transparenttextures.com/patterns/black-linen.
     border-radius: 0.125rem;
     background: var(--gradient);
     transition: transform 300ms ease;
+    right:0.4rem;
     z-index: 4;
 }
 
 .card:hover:after {
-    transform: translateX(0.15rem)
+    transform: translateX(-0.15rem)
+}
+
+.soon{
+    position: absolute;
+    z-index: 10;
+    left: 8px;
+    top: 6px;
+    color: gold;
+    rotate: -30deg;
 }
 
 .cardtitle {
     color: var(--color);
-    padding: 0.35rem 0.25rem 0 1.25rem;
+    padding: 0.35rem 1.25rem 0 0.25rem;
     font-weight: 700;
     font-size: 1.1rem;
     transition: transform 300ms ease;
@@ -99,7 +110,7 @@ background-image: url("https://www.transparenttextures.com/patterns/black-linen.
 }
 
 .card:hover .cardtitle {
-    transform: translateX(0.15rem)
+    transform: translateX(-0.15rem)
 }
   
 .cardbody {
@@ -110,7 +121,7 @@ background-image: url("https://www.transparenttextures.com/patterns/black-linen.
 }
 
 .card:hover .cardbody {
-    transform: translateX(0.25rem)
+    transform: translateX(-0.25rem)
 }
 
 .cardglow,
