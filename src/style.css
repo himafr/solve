@@ -161,6 +161,14 @@ background-image: url("https://www.transparenttextures.com/patterns/black-linen.
     font-size: 0.9rem;
     width: 75%;
 }
+footer{
+    position: fixed;
+    bottom: 8px;
+    right:8px;
+    font-style: italic;
+    font-family: "amiri";
+    font-weight: 900;
+}
 @media (max-width: 768px){
     .section{
        display: grid;
