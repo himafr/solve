@@ -162,9 +162,10 @@ background-image: url("https://www.transparenttextures.com/patterns/black-linen.
     width: 75%;
 }
 footer{
-    position: fixed;
+    position: relative;
     bottom: 8px;
     right:8px;
+    margin-top: 8px;
     font-style: italic;
     font-family: "amiri";
     font-weight: 900;
