@@ -45,6 +45,26 @@ function replaceThe(txt) {
     res =res.replace("the ","a ")
     return res
 }
+function reverse_case(strParam) {
+    let str="";
+    for(ele of strParam){
+        if(ele==ele.toLowerCase()){
+            str +=ele.toUpperCase()
+        }else{
+            str +=ele.toLowerCase()
+        }
+    }
+return str
+}
+
+console.log("12%".replace("%","")*1/100)
 
 
+function evenodd(value){
+    if(value % 2){
+        return 'odd' 
+    }
+    return 'even'
+}
+console.log(evenodd(4))
 
